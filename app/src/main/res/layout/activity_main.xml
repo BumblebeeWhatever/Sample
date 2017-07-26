@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sample="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.android.sample.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.android.sample.base.MyScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="scrollview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.android.sample.base.MyButton
+                android:id="@+id/btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="启动WebViewActivity"
+                android:textAllCaps="false"
+                sample:log_pre="out btn1"/>
+
+            <com.android.sample.base.MyButton
+                android:id="@+id/btn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="启动LifePrinterActivity"
+                android:textAllCaps="false"
+                sample:log_pre="out btn2"/>
+
+            <com.android.sample.base.MyButton
+                android:id="@+id/btn_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="万能测试btn"
+                android:textAllCaps="false"
+                sample:log_pre="out btn3"/>
+
+            <com.android.sample.base.MyHorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:contentDescription="horizontalScrollView">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv0"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv0"
+                        sample:log_pre="in iv0"/>
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv1"
+                        sample:log_pre="in iv1"/>
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv2"
+                        sample:log_pre="in iv2"/>
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv3"
+                        sample:log_pre="in iv3"/>
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv4"
+                        sample:log_pre="in iv4"/>
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv5"
+                        sample:log_pre="in iv5"/>
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv6"
+                        sample:log_pre="in iv6"/>
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv7"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv7"
+                        sample:log_pre="in iv7"/>
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv8"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv8"
+                        sample:log_pre="in iv8"/>
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv9"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv9"
+                        sample:log_pre="in iv9"/>
+
+                    <com.android.sample.base.MyButton
+                        android:id="@+id/sample_iv10"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@mipmap/ic_launcher"
+                        android:contentDescription="sample_iv10"
+                        sample:log_pre="in iv10"/>
+
+                </LinearLayout>
+
+            </com.android.sample.base.MyHorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/shadow_start_color">
+
+                <ImageView
+                    android:id="@+id/touch_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/ic_launcher"
+                    android:clickable="true"
+                    android:contentDescription="touch_iv"
+                    android:focusable="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.android.sample.base.MyScrollView>
+
+</LinearLayout>
