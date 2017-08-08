@@ -17,7 +17,7 @@ import android.widget.RelativeLayout;
 
 import com.android.sample.R;
 import com.android.sample.module.android.ViewIdCollector;
-import com.android.sample.utils.SampleUtils;
+import com.android.sample.module.android.utils.SampleUtils;
 
 public class AccessibilityActivity extends AppCompatActivity {
 
@@ -71,7 +71,7 @@ public class AccessibilityActivity extends AppCompatActivity {
 //        mButton2.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Log.d("hxl", "click btn2");
+//                Logger.d("hxl", "click btn2");
 //            }
 //        });
 //        mButton3.setOnClickListener(mListener);
@@ -80,7 +80,7 @@ public class AccessibilityActivity extends AppCompatActivity {
         mButton3.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-//                Log.d("hxl", "onTouch:" + event + ",source:" + event.getSource());
+//                Logger.d("hxl", "onTouch:" + event + ",source:" + event.getSource());
                 return false;
             }
         });
@@ -95,11 +95,11 @@ public class AccessibilityActivity extends AppCompatActivity {
 //        mImageView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
 //            @Override
 //            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-//                Log.d("hxl", "imageview onScrollChange,scrollX:" + scrollX + ",oldScrollX:" + oldScrollX);
+//                Logger.d("hxl", "imageview onScrollChange,scrollX:" + scrollX + ",oldScrollX:" + oldScrollX);
 //            }
 //        });
 
-//        Log.d(TAG, "debug?" + BuildConfig.DEBUG);
+//        Logger.d(TAG, "debug?" + BuildConfig.DEBUG);
 
         mHorizontalScrollView.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -161,11 +161,11 @@ public class AccessibilityActivity extends AppCompatActivity {
         super.onResume();
 //        mHandler.postDelayed(() -> {
 //            mImageView.getLocationInWindow(position);
-//            Log.d(TAG, "onResume,delay 1000,x:" + position[0]);
+//            Logger.d(TAG, "onResume,delay 1000,x:" + position[0]);
 //        }, 1000);
 //        mHandler.postDelayed(() -> {
 //            mImageView.getLocationInWindow(position);
-//            Log.d(TAG, "onResume,delay 4000,x:" + position[0]);
+//            Logger.d(TAG, "onResume,delay 4000,x:" + position[0]);
 //        }, 4000);
         mHandler.postDelayed(new Runnable() {
             @Override

@@ -13,8 +13,15 @@ import android.widget.ImageView;
 
 import com.android.sample.module.android.ViewIdCollector;
 import com.android.sample.module.android.activity.LifePrinterActivity;
+import com.android.sample.module.android.activity.MyAppActivity;
+import com.android.sample.module.android.activity.Myv4Activity;
 import com.android.sample.module.android.activity.WebViewActivity;
-import com.android.sample.utils.SampleUtils;
+import com.android.sample.module.android.utils.SampleUtils;
+import com.meituan.android.yoda.YodaConfirm;
+import com.meituan.android.yoda.YodaResponseListener;
+import com.meituan.android.yoda.plugins.FingerPrintHook;
+import com.meituan.android.yoda.plugins.YodaPlugins;
+import com.meituan.android.yoda.retrofit.Error;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,13 +47,19 @@ public class MainActivity extends AppCompatActivity {
 
         inflate();
         initEvent();
+
+//        startAppActivity();
+//        startV4Activity();
+//        Toast.makeText(getApplicationContext(), "1234456", Toast.LENGTH_SHORT).show();
+
+        initYoda();
     }
 
     private void inflate() {
         findViewById(R.id.parent).getViewTreeObserver().addOnGlobalFocusChangeListener(new ViewTreeObserver.OnGlobalFocusChangeListener() {
             @Override
             public void onGlobalFocusChanged(View oldFocus, View newFocus) {
-//                Log.d("hxl", "oldFocus:" + oldFocus + ",newFocus:" + newFocus);
+//                Logger.d("hxl", "oldFocus:" + oldFocus + ",newFocus:" + newFocus);
             }
         });
         mHorizontalScrollView = (HorizontalScrollView) findViewById(R.id.horizontalScrollView);
@@ -58,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         mImageView = (Button) findViewById(R.id.sample_iv0);
 
         mTouchIV = (ImageView) findViewById(R.id.touch_iv);
+
     }
 
     private void initEvent() {
@@ -86,5 +100,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Handler mHandler = new Handler();
+
+    private void startAppActivity() {
+        startActivity(new Intent(MainActivity.this, MyAppActivity.class));
+    }
+
+    private void startV4Activity() {
+        startActivity(new Intent(MainActivity.this, Myv4Activity.class));
+    }
+
+    private void initYoda() {
+        YodaPlugins.getInstance().registerFingerPrintHook(new FingerPrintHook() {
+            @Override
+            public String requestfingerPrint() {
+                return "test";
+            }
+        });
+        YodaConfirm.getInstance(this, new YodaResponseListener() {
+            @Override
+            public void onYodaResponse(String s, String s1) {
+
+            }
+
+            @Override
+            public void onCancel(String s) {
+
+            }
+
+            @Override
+            public void onError(String s, Error error) {
+
+            }
+        }).startConfirm("123");
+    }
 
 }

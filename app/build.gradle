@@ -15,10 +15,11 @@ android {
 
     defaultConfig {
         applicationId "com.android.sample"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdkVersion 24
         versionCode version_code
         versionName version_name
+        multiDexEnabled true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -43,19 +44,48 @@ android {
         }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
     }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile(name: 'statistics', ext: 'aar')
-    compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'com.android.support:support-v4:22.2.1'
-    compile 'com.android.support:design:22.2.1'
+
+    //android open sample demo
+    //    compile project(':apidemo')
+
+    if (true) {
+        //statistics network
+//    compile 'com.meituan.android.common.analyse:library:4.6.1'
+    } else {
+        //statistics local
+//    compile(name: 'statistics', ext: 'aar')
+    }
+
+    //Yoda
+    compile 'com.meituan.android.yoda:library:0.0.0.11'
+
+    //iceberg
+//    compile 'com.meituan.hotel.android.hplus:iceberg:0.2.4'
+
+    //UI
+    compile 'com.android.support:appcompat-v7:24.1.1'
+//    compile 'com.android.support:support-v4:24.1.1'
+    compile 'com.android.support:design:24.1.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //retrofit
     compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    compile 'com.sankuai.meituan.retrofit2:converter-gson:1.1.4'
+
+    //rx
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+
+    //kotlin
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    //主要是这两个依赖
     compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+    compile 'com.android.support:multidex:1.0.0'
 }

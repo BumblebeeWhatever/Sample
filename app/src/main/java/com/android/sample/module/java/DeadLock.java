@@ -31,7 +31,7 @@ public class DeadLock {
 
     private static void deadlock() {
         System.out.println("start deadlock");
-//        Log.d(TAG,"start deadlock");
+//        Logger.d(TAG,"start deadlock");
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -51,20 +51,20 @@ public class DeadLock {
 
     private static void method1() {
         System.out.println("method1 try to get lock1");
-//        Log.d(TAG,"method1 try to get lock1");
+//        Logger.d(TAG,"method1 try to get lock1");
         synchronized (mLock1) {
             System.out.println("method1 get lock1 sucess");
-//            Log.d(TAG,"method1 get lock1 sucess");
+//            Logger.d(TAG,"method1 get lock1 sucess");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             System.out.println("method1 sleep done");
-//            Log.d(TAG,"method1 sleep done");
+//            Logger.d(TAG,"method1 sleep done");
             method2();
             System.out.println("method1 call method2 done");
-//            Log.d(TAG,"method1 call method2 done");
+//            Logger.d(TAG,"method1 call method2 done");
         }
     }
 
@@ -72,20 +72,20 @@ public class DeadLock {
         char[] b = new char[]{'a', 'b'};
         String a = b + "";
         System.out.println("method2 try to get lock2");
-//        Log.d(TAG,"method2 try to get lock2");
+//        Logger.d(TAG,"method2 try to get lock2");
         synchronized (mLock2) {
             System.out.println("method2 get lock2 sucess");
-//            Log.d(TAG,"method2 get lock2 sucess");
+//            Logger.d(TAG,"method2 get lock2 sucess");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             System.out.println("method2 sleep done");
-//            Log.d(TAG,"method2 sleep done");
+//            Logger.d(TAG,"method2 sleep done");
             method1();
             System.out.println("method2 call method1 done");
-//            Log.d(TAG,"method2 call method1 done");
+//            Logger.d(TAG,"method2 call method1 done");
         }
     }
 

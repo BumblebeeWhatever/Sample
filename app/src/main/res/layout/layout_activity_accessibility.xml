@@ -26,7 +26,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <com.android.sample.base.MyScrollView
+    <com.android.sample.module.android.base.BaseScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.android.sample.base.MyButton
+            <com.android.sample.module.android.base.BaseButton
                 android:id="@+id/btn_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
                 android:visibility="gone"
                 sample:log_pre="out btn1"/>
 
-            <com.android.sample.base.MyButton
+            <com.android.sample.module.android.base.BaseButton
                 android:id="@+id/btn_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 android:visibility="gone"
                 sample:log_pre="out btn2"/>
 
-            <com.android.sample.base.MyButton
+            <com.android.sample.module.android.base.BaseButton
                 android:id="@+id/btn_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                 android:visibility="gone"
                 sample:log_pre="out btn3"/>
 
-            <com.android.sample.base.MyHorizontalScrollView
+            <com.android.sample.module.android.base.BaseHorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -81,7 +81,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv0"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -90,7 +90,7 @@
                         android:contentDescription="sample_iv0"
                         sample:log_pre="in iv0"/>
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv1"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -99,7 +99,7 @@
                         android:contentDescription="sample_iv1"
                         sample:log_pre="in iv1"/>
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv2"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -108,7 +108,7 @@
                         android:contentDescription="sample_iv2"
                         sample:log_pre="in iv2"/>
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv3"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -117,7 +117,7 @@
                         android:contentDescription="sample_iv3"
                         sample:log_pre="in iv3"/>
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv4"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -126,7 +126,7 @@
                         android:contentDescription="sample_iv4"
                         sample:log_pre="in iv4"/>
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv5"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -135,7 +135,7 @@
                         android:contentDescription="sample_iv5"
                         sample:log_pre="in iv5"/>
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv6"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -144,7 +144,7 @@
                         android:contentDescription="sample_iv6"
                         sample:log_pre="in iv6"/>
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv7"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -153,7 +153,7 @@
                         android:contentDescription="sample_iv7"
                         sample:log_pre="in iv7"/>
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv8"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -162,7 +162,7 @@
                         android:contentDescription="sample_iv8"
                         sample:log_pre="in iv8"/>
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv9"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -171,7 +171,7 @@
                         android:contentDescription="sample_iv9"
                         sample:log_pre="in iv9"/>
 
-                    <com.android.sample.base.MyButton
+                    <com.android.sample.module.android.base.BaseButton
                         android:id="@+id/sample_iv10"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -182,14 +182,14 @@
 
                 </LinearLayout>
 
-            </com.android.sample.base.MyHorizontalScrollView>
+            </com.android.sample.module.android.base.BaseHorizontalScrollView>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="40dp"
-                android:background="@color/shadow_start_color">
+                android:background="#ffcc00">
 
                 <ImageView
                     android:id="@+id/touch_iv"
@@ -204,6 +204,6 @@
 
         </LinearLayout>
 
-    </com.android.sample.base.MyScrollView>
+    </com.android.sample.module.android.base.BaseScrollView>
 
 </LinearLayout>

@@ -181,7 +181,7 @@ public final class Retrofit {
 
     /**
      * The factory used to create {@linkplain okhttp3.Call OkHttp calls} for sending a HTTP requests.
-     * Typically an instance of {@link OkHttpClient}.
+     * Typically an showDialogFragment of {@link OkHttpClient}.
      */
     public okhttp3.Call.Factory callFactory() {
         return callFactory;
@@ -559,7 +559,7 @@ public final class Retrofit {
         }
 
         /**
-         * When calling {@link #create} on the resulting {@link Retrofit} instance, eagerly validate
+         * When calling {@link #create} on the resulting {@link Retrofit} showDialogFragment, eagerly validate
          * the configuration of all methods in the supplied interface.
          */
         public Builder validateEagerly(boolean validateEagerly) {
@@ -568,7 +568,7 @@ public final class Retrofit {
         }
 
         /**
-         * Create the {@link Retrofit} instance using the configured values.
+         * Create the {@link Retrofit} showDialogFragment using the configured values.
          * <p>
          * Note: If neither {@link #client} nor {@link #callFactory} is called a default {@link
          * OkHttpClient} will be created and used.

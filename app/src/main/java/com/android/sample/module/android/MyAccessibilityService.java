@@ -42,8 +42,8 @@ public class MyAccessibilityService extends AccessibilityService {
 
     private void handlerEvent(AccessibilityEvent event) {
         Log.d("hxl", "AccessibilityEvent:" + event.toString());
-//        Log.d("hxl", "source:" + event.getSource());
-//        Log.d("hxl", "getRootInActiveWindow:" + getRootInActiveWindow());
+//        Logger.d("hxl", "source:" + event.getSource());
+//        Logger.d("hxl", "getRootInActiveWindow:" + getRootInActiveWindow());
         AccessibilityNodeInfo accessibilityNodeInfo = getRootInActiveWindow();
         if (accessibilityNodeInfo == null) {
             Log.d("hxl", "accessibilityNodeInfo==null");
@@ -88,13 +88,13 @@ public class MyAccessibilityService extends AccessibilityService {
 //            @Override
 //            public void onCompleted(GestureDescription gestureDescription) {
 //                super.onCompleted(gestureDescription);
-//                Log.d("hxl", "onCompleted");
+//                Logger.d("hxl", "onCompleted");
 //            }
 //
 //            @Override
 //            public void onCancelled(GestureDescription gestureDescription) {
 //                super.onCancelled(gestureDescription);
-//                Log.d("hxl", "onCancelled");
+//                Logger.d("hxl", "onCancelled");
 //            }
 //        }, null);
     }

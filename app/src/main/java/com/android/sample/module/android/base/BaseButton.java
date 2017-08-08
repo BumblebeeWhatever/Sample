@@ -1,4 +1,4 @@
-package com.android.sample.base;
+package com.android.sample.module.android.base;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -15,21 +15,21 @@ import com.android.sample.R;
  * Created by hexiaolei on 2017/7/25.
  */
 
-public class MyButton extends AppCompatButton {
+public class BaseButton extends AppCompatButton {
 
     private String TAG = "hxl";
     private String mPreStr = null;
 
-    public MyButton(Context context) {
+    public BaseButton(Context context) {
         super(context);
     }
 
-    public MyButton(Context context, AttributeSet attrs) {
+    public BaseButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs);
     }
 
-    public MyButton(Context context, AttributeSet attrs, int defStyleAttr) {
+    public BaseButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(attrs);
     }
@@ -44,31 +44,31 @@ public class MyButton extends AppCompatButton {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-//        Log.d(TAG, this + mPreStr + " onTouchEvent,event:" + event + ",source:" + event.getSource());
+//        Logger.d(TAG, this + mPreStr + " onTouchEvent,event:" + event + ",source:" + event.getSource());
         return super.onTouchEvent(event);
     }
 
     @Override
     public boolean performClick() {
-//        Log.d(TAG, mPreStr + " performClick");
+//        Logger.d(TAG, mPreStr + " performClick");
         return super.performClick();
     }
 
     @Override
     public boolean onTrackballEvent(MotionEvent event) {
-//        Log.d(TAG, mPreStr + " onTrackballEvent");
+//        Logger.d(TAG, mPreStr + " onTrackballEvent");
         return super.onTrackballEvent(event);
     }
 
     @Override
     public boolean onKeyShortcut(int keyCode, KeyEvent event) {
-//        Log.d(TAG, mPreStr + " onKeyShortcut");
+//        Logger.d(TAG, mPreStr + " onKeyShortcut");
         return super.onKeyShortcut(keyCode, event);
     }
 
     @Override
     public boolean dispatchKeyEventPreIme(KeyEvent event) {
-//        Log.d(TAG, mPreStr + " dispatchKeyEventPreIme");
+//        Logger.d(TAG, mPreStr + " dispatchKeyEventPreIme");
         return super.dispatchKeyEventPreIme(event);
     }
 
@@ -80,20 +80,20 @@ public class MyButton extends AppCompatButton {
 
     @Override
     public boolean dispatchKeyShortcutEvent(KeyEvent event) {
-//        Log.d(TAG, mPreStr + " dispatchKeyShortcutEvent");
+//        Logger.d(TAG, mPreStr + " dispatchKeyShortcutEvent");
         return super.dispatchKeyShortcutEvent(event);
     }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
         boolean fraud = event != null && event.getPointerCount() > 0 && event.getToolType(0) == MotionEvent.TOOL_TYPE_UNKNOWN;
-        Log.d("hxl", mPreStr + " dispatchTouchEvent,fraud:" + fraud);
+//        Log.d("hxl", mPreStr + " dispatchTouchEvent,fraud:" + fraud);
         return super.dispatchTouchEvent(event);
     }
 
     @Override
     public boolean onHoverEvent(MotionEvent event) {
-//        Log.d(TAG, mPreStr + " onHoverEvent");
+//        Logger.d(TAG, mPreStr + " onHoverEvent");
         return super.onHoverEvent(event);
     }
 

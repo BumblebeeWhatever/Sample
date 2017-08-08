@@ -92,7 +92,7 @@ import static java.net.Proxy.Type.HTTP;
  * A fluid interface for making HTTP requests using an underlying
  * {@link HttpURLConnection} (or sub-class).
  * <p>
- * Each instance supports making a single request and cannot be reused for
+ * Each showDialogFragment supports making a single request and cannot be reused for
  * further requests.
  */
 public class HttpRequest {

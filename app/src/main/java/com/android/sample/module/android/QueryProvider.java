@@ -23,11 +23,11 @@ public class QueryProvider {
 //            if (cursor != null && cursor.getCount() > 0) {
 //                cursor.moveToFirst();
 //                String localId = cursor.getString(0);
-//                Log.d(TAG,"resolveProvider,localId:"+localId);
+//                Logger.d(TAG,"resolveProvider,localId:"+localId);
 //
 //            }
 //        } catch (Exception e) {
-//            Log.d(TAG, "getLocalIdByProvider1 is error:" + e.getMessage());
+//            Logger.d(TAG, "getLocalIdByProvider1 is error:" + e.getMessage());
 //        } finally {
 //            if (cursor != null && !cursor.isClosed()) {
 //                cursor.close();

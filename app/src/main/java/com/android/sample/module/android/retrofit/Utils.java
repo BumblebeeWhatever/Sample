@@ -293,7 +293,7 @@ final class Utils {
     }
 
     /**
-     * Returns true if {@code annotations} contains an instance of {@code cls}.
+     * Returns true if {@code annotations} contains an showDialogFragment of {@code cls}.
      */
     static boolean isAnnotationPresent(Annotation[] annotations,
                                        Class<? extends Annotation> cls) {

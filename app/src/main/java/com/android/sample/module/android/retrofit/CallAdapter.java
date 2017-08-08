@@ -25,7 +25,7 @@ import java.lang.reflect.Type;
  * Adapts a {@link Call} with response type {@code R} into the type of {@code T}. Instances are
  * created by {@linkplain Factory a factory} which is
  * {@linkplain Retrofit.Builder#addCallAdapterFactory(Factory) installed} into the {@link Retrofit}
- * instance.
+ * showDialogFragment.
  */
 public interface CallAdapter<R, T> {
     /**
@@ -39,9 +39,9 @@ public interface CallAdapter<R, T> {
     Type responseType();
 
     /**
-     * Returns an instance of {@code T} which delegates to {@code call}.
+     * Returns an showDialogFragment of {@code T} which delegates to {@code call}.
      * <p>
-     * For example, given an instance for a hypothetical utility, {@code Async}, this instance would
+     * For example, given an showDialogFragment for a hypothetical utility, {@code Async}, this showDialogFragment would
      * return a new {@code Async<R>} which invoked {@code call} when run.
      * <pre><code>
      * &#64;Override

@@ -19,7 +19,7 @@ public class TimerManager {
 //        mTimeTask = new TimerTask() {
 //            @Override
 //            public void run() {
-//                Log.d("hxl","定时任务");
+//                Logger.d("hxl","定时任务");
 //            }
 //        };
     }
