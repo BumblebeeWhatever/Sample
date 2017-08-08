@@ -18,7 +18,10 @@
 # IntelliJ
 .idea/
 *.iml
+<<<<<<< HEAD
 .idea
+=======
+>>>>>>> 提交最新sample
 captures/ 
  
 # Eclipse User-specific configurations
@@ -55,4 +58,8 @@ proguard/
 # OSX
 # =========================
 
+<<<<<<< HEAD
 .DS_Store
+=======
+.DS_Store
+>>>>>>> 提交最新sample
